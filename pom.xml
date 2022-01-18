@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>net.jar</groupId>
@@ -11,99 +13,32 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <java.version>1.6</java.version>
-    <spring.version>3.1.0.RELEASE</spring.version>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
   </properties>
 
   <dependencies>
-    <!-- Spring core & mvc -->
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-context</artifactId>
-      <version>${spring.version}</version>
-    </dependency>
+
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
-      <version>${spring.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-orm</artifactId>
-      <version>${spring.version}</version>
-      <type>jar</type>
-      <scope>compile</scope>
+      <version>5.3.15</version>
     </dependency>
 
     <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-test</artifactId>
-      <version>${spring.version}</version>
-      <type>jar</type>
+      <groupId>javax.servlet</groupId>  
+      <artifactId>servlet-api</artifactId>  
+      <version>3.0-alpha-1</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.2</version>
       <scope>test</scope>
     </dependency>
 
-    <!-- Servlet Spec -->
-    <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>servlet-api</artifactId>
-      <version>2.4</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>javax.servlet.jsp</groupId>
-      <artifactId>jsp-api</artifactId>
-      <version>2.1</version>
-      <scope>provided</scope>
-    </dependency>
-
-    <!-- Java EE JSF -->
-    <dependency>
-      <groupId>javax</groupId>
-      <artifactId>javaee-api</artifactId>
-      <version>8.0.1</version>
-    </dependency>
-    <dependency>
-      <groupId>javax</groupId>
-      <artifactId>javaee-web-api</artifactId>
-      <version>8.0.1</version>
-    </dependency>
-    <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>jstl</artifactId>
-      <version>1.1.2</version>
-    </dependency>
-    <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>servlet-api</artifactId>
-      <version>3.0-alpha-1</version>
-    </dependency>
-    <dependency>
-      <groupId>com.sun.el</groupId>
-      <artifactId>el-ri</artifactId>
-      <version>3.0.4</version>
-    </dependency>
-    <dependency>
-      <groupId>com.sun.faces</groupId>
-      <artifactId>jsf-api</artifactId>
-      <version>2.2.20</version>
-    </dependency>
-    <dependency>
-      <groupId>com.sun.faces</groupId>
-      <artifactId>jsf-impl</artifactId>
-      <version>2.2.20</version>
-    </dependency>
-
   </dependencies>
-
-  <repositories>
-    <repository>
-      <id>springsource-milestones</id>
-      <name>SpringSource Milestones Proxy</name>
-      <url>https://oss.sonatype.org/content/repositories/springsource-milestones</url>
-    </repository>
-  </repositories>
 
   <build>
     <finalName>spring-web-mvc-template</finalName>
