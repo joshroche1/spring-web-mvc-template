@@ -11,7 +11,11 @@ import org.springframework.web.servlet.ModelAndView;
 public class HomeController {
 
   @RequestMapping(value="/")
-  public ModelAndView IndexPage(HttpServletResponse response) throws IOException{
+  public ModelAndView IndexPage(HttpServletResponse response) throws IOException {
     return new ModelAndView("index");
+  }
+  @RequestMapping(value="/bootstrap")
+  public ModelAndView BootstrapPage(HttpServletResponse reponse) throws IOException {
+    return new ModelAndView("bootstrap");
   }
 }
