@@ -19,7 +19,7 @@
       <h3>Bootstrap 3 Example</h3>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="/">Index</a></li>
+      <li><a href="spring-web-mvc-template/">Index</a></li>
       <li><a href="#">About</a></li>
     </ul>
   </div>
