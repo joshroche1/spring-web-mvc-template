@@ -15,6 +15,7 @@
 <ul>
   <li><a href="/spring-web-mvc-template/">Index</a>
   <li><a href="/spring-web-mvc-template/bootstrap">Bootstrap</a>
+  <li><a href="/spring-web-mvc-template/student">Add Student Test</a></li>
 </ul>
 
 </body>
