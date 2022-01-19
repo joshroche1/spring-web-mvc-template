@@ -12,5 +12,10 @@
 <h1>Welcome</h1>
 <p>This is the homepage!</p>
 
+<ul>
+  <li><a href="/">Index</a>
+  <li><a href="/bootstrap">Bootstrap</a>
+</ul>
+
 </body>
 </html>
