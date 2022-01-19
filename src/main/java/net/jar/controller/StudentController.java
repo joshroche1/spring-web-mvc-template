@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.ui.ModelMap;
 
+import net.jar.model.Student;
+
 @Controller
 public class StudentController {
   @RequestMapping(value = "/student", method = RequestMethod.GET)
@@ -15,7 +17,7 @@ public class StudentController {
   }
 
   @RequestMapping(value = "/addStudent", method = RequestMethod.POST)
-  public String addStudent(@ModelAttribute("SpringWeb")Student student, ModelMap model) {
+  public String addStudent(@ModelAttribute("spring-web-mvc-template")Student student, ModelMap model) {
     model.addAttribute("name", student.getName());
     model.addAttribute("age", student.getAge());
     model.addAttribute("id", student.getId());
