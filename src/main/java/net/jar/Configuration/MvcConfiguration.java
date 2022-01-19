@@ -1,4 +1,4 @@
-package net.jar.config;
+package net.jar.Configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -12,10 +12,9 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @Configuration
 @ComponentScan(basePackages="net.jar")
 @EnableWebMvc
-public class MvcConfiguration extends WebMvcConfigurerAdapter{
-
-	@Bean
-	public ViewResolver getViewResolver(){
+public class MvcConfiguration extends WebMvcConfigurerAdapter {
+  @Bean
+  public ViewResolver getViewResolver(){
 		InternalResourceViewResolver resolver = new InternalResourceViewResolver();
 		resolver.setPrefix("/WEB-INF/views/");
 		resolver.setSuffix(".jsp");
@@ -26,6 +25,4 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter{
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
 	}
-
-	
 }
