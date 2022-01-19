@@ -13,8 +13,8 @@
 <p>This is the homepage!</p>
 
 <ul>
-  <li><a href="spring-web-mvc-template/">Index</a>
-  <li><a href="spring-web-mvc-template/bootstrap">Bootstrap</a>
+  <li><a href="/spring-web-mvc-template/">Index</a>
+  <li><a href="/spring-web-mvc-template/bootstrap">Bootstrap</a>
 </ul>
 
 </body>
