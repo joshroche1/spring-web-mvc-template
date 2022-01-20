@@ -7,48 +7,66 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="HTML 5 CSS 3 Spring Form"/>
-  <link rel="stylesheet" href="../../css/style.css" th:href="@{/css/style.css}"/>
   <!--
+  <link rel="stylesheet" href="../../css/style.css" th:href="@{/css/style.css}"/>
+-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
--->
   <script src="../../js/libs/modernizr-2.0.6.min.js" th:src="@{/js/libs/modernizr-2.0.6.min.js}"></script>
   <title>Spring MVC Thymeleaf Template</title>
 </head>
 <body>
 
-<div id="container">
+<header>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <h3>Spring MVC Thymeleaf Template</h3>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="/">Index</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </div>
+</nav>
+</header>
 
-<header></header>
-
+<div id="container" class="container">
 <form action="#" th:object="${messageInfo}" th:action="@{/insert}" method="post">
   <h1>Get In Touch With Us ...</h1>
   <fieldset id="user-details">
-    <label for="name" th:text="#{theader.name}">Name: </label> 
-    <input type="text" name="name" value="" id="name" placeholder="Your Name" required="required" autofocus="autofocus" th:value="*{name}" /> 
-    <label for="email" th:text="#{theader.email}">Email: </label>
-    <input type="email" name="email" value="" id="email" placeholder="mail@email.com" required="required" th:value="*{email}" /> 
-    <label for="phone" th:text="#{theader.phone}">Phone: </label> 
-    <input type="text" name="phone" value="" th:value="*{phone}"/>
-    <label for="website" th:text="#{theader.website}">Website:</label> 
-    <input type="url" name="website" value="" th:value="*{website}" />
+    <div class="form-group">
+      <label for="name" th:text="#{theader.name}">Name: </label> 
+      <input type="text" name="name" value="" id="name" placeholder="Your Name" required="required" autofocus="autofocus" th:value="*{name}" class="form-control" /> 
+    </div><div class="form-group">
+      <label for="email" th:text="#{theader.email}">Email: </label>
+      <input type="email" name="email" value="" id="email" placeholder="mail@email.com" required="required" th:value="*{email}" class="form-control" />
+    </div><div class="form-group">
+      <label for="phone" th:text="#{theader.phone}">Phone: </label> 
+      <input type="text" name="phone" value="" th:value="*{phone}" class="form-control" />
+    </div><div class="form-group">
+      <label for="website" th:text="#{theader.website}">Website:</label> 
+      <input type="url" name="website" value="" th:value="*{website}" class="form-control" />
+    </div><div class="form-group">
   </fieldset>
   <!--end user-details-->
   <fieldset id="user-message">
-    <label for="message" th:text="#{theader.message}">Your Message: </label>
-    <textarea name="message" rows="0" cols="0" th:value="*{message}" ></textarea>
-    <input type="submit" value="Submit Message" name="submit" class="submit" />
+    <div class="form-group">
+      <label for="message" th:text="#{theader.message}">Your Message: </label>
+      <textarea name="message" rows="0" cols="0" th:value="*{message}" class="form-control"></textarea>
+      <input type="submit" value="Submit Message" name="submit" class="btn btn-primary" />
+    </div>
   </fieldset>
   <!-- end user-message -->
   <div id="errors" th:if="${#fields.hasErrors('*')}">
     <ul><li th:each="err : ${#fields.errors('*')}" th:text="${err}">Input is incorrect</li></ul>
   </div>
 </form>
+</div>
 
-<footer></footer>
-
-</div><!--! end of #container -->
+<footer>
+</footer>
 
 <script>
 /*<![CDATA[*/
