@@ -5,9 +5,6 @@ import java.util.List;
 
 import javax.validation.Valid;
 
-import net.jar.form.MessageForm;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -16,13 +13,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import net.jar.model.MessageForm;
 /**
  * Handles requests for the application home page.
  */
 @Controller
 public class HomeController {
 
-  private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
   private static List<MessageForm> messageFormRepository = new ArrayList<MessageForm>();
 
   /**
@@ -30,7 +27,6 @@ public class HomeController {
    */
   @RequestMapping(value = "/", method = RequestMethod.GET)
   public String homeForm(Model model) {
-    logger.info("Welcome home! from Thymeleaf");
     model.addAttribute("messageInfo", new MessageForm());
     return "index";
   }
