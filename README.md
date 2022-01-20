@@ -2,6 +2,8 @@
 Template for a Spring MVC Web App 
 
 ###
+Using Thymeleaf and Bootstrap 3
+###
 
 Maven Archetype:
 
